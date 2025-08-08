@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome • Node.js Server</title>
+  <style>
+    /* Reset & core */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+    /* Animated gradient background */
+    body {
+      background: linear-gradient(270deg, #ff4e50, #f9d423, #24C6DC, #514A9D);
+      background-size: 800% 800%;
+      animation: gradientBG 20s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+    @keyframes gradientBG {
+      0%   { background-position: 0% 50%; }
+      25%  { background-position: 50% 100%; }
+      50%  { background-position: 100% 50%; }
+      75%  { background-position: 50% 0%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Container spacing */
+    .container {
+      max-width: 800px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 5vh;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.2);
+      border-radius: 1rem;
+    }
+
+    /* Typing effect for the heading */
+    h1 {
+      font-size: 3rem;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid #fff;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+      margin-bottom: 1rem;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 22ch; }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50%      { border-color: #fff; }
+    }
+
+    /* Paragraph styling & fade-in */
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 2s ease 3s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to Node.js</h1>
+    <p>
+      Node.js is a powerful, event-driven JavaScript runtime built on Chrome’s V8 engine. 
+      It enables you to run JavaScript on the server side, allowing for highly scalable 
+      network applications that handle thousands of concurrent connections with minimal 
+      overhead. We use Node.js for its non-blocking I/O model, vast package ecosystem (npm), 
+      and the ability to use the same language across front and back ends—boosting 
+      development speed and maintainability.
+    </p>
+   <h3> Your server is running on port 3000 <h3> 
+ </div>
+</body>
+</html>
